@@ -1,3 +1,5 @@
+# https://adventofcode.com/2020/day/2
+
 data = [
     [
         int(line[: line.index('-')]),

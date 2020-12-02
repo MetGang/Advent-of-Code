@@ -1,3 +1,5 @@
+# https://adventofcode.com/2020/day/1
+
 nums = [ int(line) for line in open('input.txt') ]
 
 # Part one
