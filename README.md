@@ -15,6 +15,7 @@ In case anyone wants to checkout some other solutions, here are links to some ot
 * [metaquarx](https://github.com/metaquarx/advent_of_code_2020)
 * [Orlha](https://github.com/Orlha/advent_2020)
 * [Rosme](https://github.com/Rosme/aoc)
+* [rubenwardy](https://gitlab.com/rubenwardy/advent_of_code)
 * [S4kyt](https://github.com/S4kyt/AoC-2020)
 
 ### License
