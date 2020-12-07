@@ -7,7 +7,7 @@ data = [
         line[line.index(' ') + 1:line.index(': ')],
         line[line.index(': ') + 2:-1]
     ]
-    for line in open('input.txt')
+    for line in open('input.txt', 'r')
 ]
 
 # Part one

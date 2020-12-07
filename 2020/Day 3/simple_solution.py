@@ -1,7 +1,7 @@
 # https://adventofcode.com/2020/day/3
 
 def traverse(slope_x, slope_y):
-    data = [ line[:-1] for line in open('input.txt') ]
+    data = [ line[:-1] for line in open('input.txt', 'r') ]
     count = 0
     x = 0
     y = 0

@@ -1,6 +1,6 @@
 # https://adventofcode.com/2020/day/1
 
-nums = [ int(line) for line in open('input.txt') ]
+nums = [ int(line) for line in open('input.txt', 'r') ]
 
 # Part one
 for i in nums:

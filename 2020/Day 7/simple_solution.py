@@ -23,7 +23,7 @@ def count_bags_in(key, database):
             count += child['quantity'] + child['quantity'] * count_bags_in(child['name'], database)
     return count
 
-with open('input.txt') as file:
+with open('input.txt', 'r') as file:
     database = { x[:x.index('bags') - 1]: [ { 'name': z[z.index(' ') + 1:], 'quantity': int(z[:z.index(' ')]) } for z in [ rchop(y, [ 'no other bags', ' bags', ' bag' ]) for y in x[x.index('contain') + 8:].split(', ') ] if z ] for x in file.read().split('.\n')[:-1] }
     # Part one
     count = 0
