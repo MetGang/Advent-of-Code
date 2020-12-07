@@ -10,7 +10,7 @@ def traverse(slope_x, slope_y):
         count += data[y][x % len(data[y])] == '#'
         x += slope_x
         y += slope_y
-    
+
     return count
 
 # Part one
