@@ -12,7 +12,7 @@ with open('input.txt', 'r') as file:
         level = 64
         l = 0
         u = 127
-        for v in line[: -4]:
+        for v in line[:-4]:
             if v == 'F':
                 u -= level
                 row = u
@@ -24,7 +24,7 @@ with open('input.txt', 'r') as file:
         level = 4
         l = 0
         u = 7
-        for h in line[-4 : -1]:
+        for h in line[-4:-1]:
             if h == 'L':
                 u -= level
                 column = u

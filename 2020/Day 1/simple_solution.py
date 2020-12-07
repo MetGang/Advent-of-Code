@@ -7,7 +7,7 @@ for i in nums:
     s = 2020 - i
     for j in nums:
         if s == j:
-            print(i, j, i * j)
+            print(i * j)
 
 # Part two
 for i in nums:
@@ -16,4 +16,4 @@ for i in nums:
         s2 = s1 - j
         for k in nums:
             if s2 == k:
-                print(i, j, k, i * j * k)
+                print(i * j * k)
