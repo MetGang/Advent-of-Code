@@ -22,7 +22,7 @@ def adjencent_occupied_count(data, x, y, w, h):
 
 	return count
 
-def farmost_occupied_count(data, x, y, w, h, debug):
+def farmost_occupied_count(data, x, y, w, h):
 	count = 0
 	d = min(w, h)
 
@@ -32,8 +32,6 @@ def farmost_occupied_count(data, x, y, w, h, debug):
 				break
 			if data[y][x - i - 1][0] == '#':
 				count += 1
-				if debug:
-					print('Debug: ', -1, 0)
 				break
 	for j in range(h):
 		if y - j > 0:
@@ -41,8 +39,6 @@ def farmost_occupied_count(data, x, y, w, h, debug):
 				break
 			if data[y - j - 1][x][0] == '#':
 				count += 1
-				if debug:
-					print('Debug: ', 0, -1)
 				break
 	for i in range(w):
 		if x + i < w - 1:
@@ -50,8 +46,6 @@ def farmost_occupied_count(data, x, y, w, h, debug):
 				break
 			if data[y][x + i + 1][0] == '#':
 				count += 1
-				if debug:
-					print('Debug: ', 1, 0)
 				break
 	for j in range(h):
 		if y + j < h - 1:
@@ -59,8 +53,6 @@ def farmost_occupied_count(data, x, y, w, h, debug):
 				break
 			if data[y + j + 1][x][0] == '#':
 				count += 1
-				if debug:
-					print('Debug: ', 0, 1)
 				break
 	for k in range(d):
 		if x - k > 0 and y - k > 0:
@@ -68,8 +60,6 @@ def farmost_occupied_count(data, x, y, w, h, debug):
 				break
 			if data[y - k - 1][x - k - 1][0] == '#':
 				count += 1
-				if debug:
-					print('Debug: ', -1, -1)
 				break
 	for k in range(d):
 		if x - k > 0 and y + k < h - 1:
@@ -77,8 +67,6 @@ def farmost_occupied_count(data, x, y, w, h, debug):
 				break
 			if data[y + k + 1][x - k - 1][0] == '#':
 				count += 1
-				if debug:
-					print('Debug: ', -1, 1)
 				break
 	for k in range(d):
 		if x + k < w - 1 and y - k > 0:
@@ -86,8 +74,6 @@ def farmost_occupied_count(data, x, y, w, h, debug):
 				break
 			if data[y - k - 1][x + k + 1][0] == '#':
 				count += 1
-				if debug:
-					print('Debug: ', 1, -1)
 				break
 	for k in range(d):
 		if x + k < w - 1 and y + k < h - 1:
@@ -95,8 +81,6 @@ def farmost_occupied_count(data, x, y, w, h, debug):
 				break
 			if data[y + k + 1][x + k + 1][0] == '#':
 				count += 1
-				if debug:
-					print('Debug: ', 1, 1)
 				break
 
 	return count
@@ -146,10 +130,10 @@ with open('input.txt', 'r') as file:
 			row = data[y]
 			for x in range(w):
 				cell = row[x]
-				if cell[0] == 'L' and farmost_occupied_count(data, x, y, w, h, False) == 0:
+				if cell[0] == 'L' and farmost_occupied_count(data, x, y, w, h) == 0:
 					cell[1] = '#'
 					found_change = True
-				if cell[0] == '#' and farmost_occupied_count(data, x, y, w, h, False) >= 5:
+				if cell[0] == '#' and farmost_occupied_count(data, x, y, w, h) >= 5:
 					cell[1] = 'L'
 					found_change = True
 	count = 0
