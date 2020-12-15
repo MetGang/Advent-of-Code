@@ -1,6 +1,6 @@
 # https://adventofcode.com/2020/day/11
 
-def adjencent_occupied_count(data, x, y, w, h):
+def adjacent_occupied_count(data, x, y, w, h):
     count = 0
 
     if x > 0 and data[y][x - 1][0] == '#':
@@ -102,10 +102,10 @@ with open('input.txt', 'r') as file:
             row = data[y]
             for x in range(w):
                 cell = row[x]
-                if cell[0] == 'L' and adjencent_occupied_count(data, x, y, w, h) == 0:
+                if cell[0] == 'L' and adjacent_occupied_count(data, x, y, w, h) == 0:
                     cell[1] = '#'
                     found_change = True
-                if cell[0] == '#' and adjencent_occupied_count(data, x, y, w, h) >= 4:
+                if cell[0] == '#' and adjacent_occupied_count(data, x, y, w, h) >= 4:
                     cell[1] = 'L'
                     found_change = True
     count = 0
