@@ -47,10 +47,10 @@ def part_2(content):
     return sum(map(lambda x: memory[x], memory))
 
 with open('input.txt', 'r') as file:
-	content = file.read()
+    content = file.read()
 
-	# Part one
-	print(part_1(content))
+    # Part one
+    print(part_1(content))
 
-	# Part two
-	print(part_2(content))
+    # Part two
+    print(part_2(content))
