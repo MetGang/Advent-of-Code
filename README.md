@@ -12,7 +12,6 @@ In case anyone wants to checkout some other solutions, here are links to some ot
 * [Dreamykass](https://github.com/Dreamykass/advent-of-code)
 * [eXpl0it3r](https://github.com/eXpl0it3r/Advent-of-Code)
 * [JonnyPtn](https://github.com/JonnyPtn/AOC2020)
-* [metaquarx](https://github.com/metaquarx/advent_of_code_2020)
 * [Orlha](https://github.com/Orlha/advent_2020)
 * [Rosme](https://github.com/Rosme/aoc)
 * [rubenwardy](https://gitlab.com/rubenwardy/advent_of_code)
