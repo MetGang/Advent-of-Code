@@ -1,9 +1,7 @@
 # https://adventofcode.com/2018/day/1
 
-from functools import reduce
-
 def solve(data):
-    return reduce(lambda a, b: a + b, data)
+    return sum(data)
 
 with open('input.txt') as file:
     data = [ int(x) for x in file.readlines() ]
