@@ -9,6 +9,7 @@ You don't need a computer science background to participate - just a little prog
 We have quite some fun on the [SFML Discord](https://discord.gg/nr4X7Fh) server with these puzzles.
 In case anyone wants to checkout some other solutions, here are links to some other repos.
 
+* [_hao](https://github.com/underscoreHao/advent-of-code)
 * [Dew](https://github.com/crumblingstatue/advent-of-code)
 * [Dreamykass](https://github.com/Dreamykass/advent-of-code)
 * [eXpl0it3r](https://github.com/eXpl0it3r/Advent-of-Code)
