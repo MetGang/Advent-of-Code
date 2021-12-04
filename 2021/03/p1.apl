@@ -9,6 +9,6 @@ data ← ⍎¨↑rawData
 
 ⍝ Solve ← (2⊥MostCommon)×(2⊥LeastCommon)
 
-Solve ← (2⊥⊢×2⊥~)≢>2×+⌿∘⊢
+Solve ← (2⊥⊢×2⊥~)≢>2×+⌿
 
 Solve data
