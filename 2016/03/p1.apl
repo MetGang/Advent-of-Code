@@ -4,6 +4,6 @@ rawData ← ⊃ ⎕NGET 'input.txt' 1
 
 data ← 2⊃¨' '⎕VFI¨rawData
 
-Solve ← {+/(∧/2∘⌽<1∘⌽+⊢)¨⍵}
+Solve ← +/(∧/2∘⌽<1∘⌽+⊢)¨∘⊢
 
 Solve data
