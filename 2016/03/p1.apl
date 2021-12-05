@@ -1,4 +1,4 @@
-⍝ https://adventofcode.com/2015/day/3
+⍝ https://adventofcode.com/2016/day/3
 
 rawData ← ⊃ ⎕NGET 'input.txt' 1
 
