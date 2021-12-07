@@ -4,6 +4,8 @@ rawData ← ⊃ ⎕NGET 'input.txt' 1
 
 data ← ⍎⊃rawData
 
-Solve ← {⌊/+/{2÷⍨⍵×⍵+1}|⍵∘.-⍨⍳⌈/⍵}
+average ← (⌊+/÷≢)data
 
-Solve data
+Solve ← {⌊/+/{2÷⍨⍵×⍵+1}|⍺-⍵}
+
+average Solve data

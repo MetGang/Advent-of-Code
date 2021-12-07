@@ -4,6 +4,8 @@ rawData ← ⊃ ⎕NGET 'input.txt' 1
 
 data ← ⍎⊃rawData
 
-Solve ← {⌊/+/|⍵∘.-⍨⍳⌈/⍵}
+median ← {⍵[⍋⍵]⊃⍨2÷⍨≢⍵}data
 
-Solve data
+Solve ← {⌊/+/|⍺-⍵}
+
+median Solve data
