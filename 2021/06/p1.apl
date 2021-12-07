@@ -1,5 +1,7 @@
 ⍝ https://adventofcode.com/2021/day/6
 
+⎕IO ← 0
+
 rawData ← ⊃ ⎕NGET 'input.txt' 1
 
 data ← ⍎⊃rawData
