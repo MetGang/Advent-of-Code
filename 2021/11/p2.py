@@ -4,44 +4,44 @@ import numpy as np
 
 INT32_MIN = np.iinfo(np.int32).min
 
-def solve(matrix):
-	h, w = np.shape(matrix)
+def solve(data):
+	h, w = np.shape(data)
 	total = 0
 	step = 1
 
 	while True:
-		matrix += 1
+		data += 1
 
-		while not np.all(matrix < 10):
+		while not np.all(data < 10):
 			for j in range(h):
 				for i in range(w):
-					if matrix[j][i] > 9:
-						matrix[j][i] = INT32_MIN
+					if data[j][i] > 9:
+						data[j][i] = INT32_MIN
 
 						if j > 0 and i > 0:
-							matrix[j - 1][i - 1] += 1
+							data[j - 1][i - 1] += 1
 						if j > 0:
-							matrix[j - 1][i] += 1
+							data[j - 1][i] += 1
 						if j > 0 and i < w - 1:
-							matrix[j - 1][i + 1] += 1
+							data[j - 1][i + 1] += 1
 						if i > 0:
-							matrix[j][i - 1] += 1
+							data[j][i - 1] += 1
 						if i < w - 1:
-							matrix[j][i + 1] += 1
+							data[j][i + 1] += 1
 						if j < h - 1 and i > 0:
-							matrix[j + 1][i - 1] += 1
+							data[j + 1][i - 1] += 1
 						if j < h - 1:
-							matrix[j + 1][i] += 1
+							data[j + 1][i] += 1
 						if j < h - 1 and i < w - 1:
-							matrix[j + 1][i + 1] += 1
+							data[j + 1][i + 1] += 1
 
-		mask = matrix < 0
+		mask = data < 0
 
 		total += mask.sum()
 
-		matrix[mask] = 0
+		data[mask] = 0
 
-		if np.all(matrix == 0):
+		if np.all(data == 0):
 			return step
 		
 		step += 1
