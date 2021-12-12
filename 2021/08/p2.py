@@ -48,9 +48,9 @@ def solve(data):
     return total
 
 def parse(content):
-	return [ [ part.split(' ') for part in line.split(' | ') ] for line in content.split('\n') ]
+    return [ [ part.split(' ') for part in line.split(' | ') ] for line in content.split('\n') ]
 
 with open('input.txt') as file:
-	data = parse(file.read()[:-1])
+    data = parse(file.read()[:-1])
 
-	print(solve(data))
+    print(solve(data))

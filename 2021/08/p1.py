@@ -10,9 +10,9 @@ def solve(data):
     return len(flatten) - flatten.count(5) - flatten.count(6)
 
 def parse(content):
-	return [ line.split(' | ')[1].split(' ') for line in content.split('\n') ]
+    return [ line.split(' | ')[1].split(' ') for line in content.split('\n') ]
 
 with open('input.txt') as file:
-	data = parse(file.read()[:-1])
+    data = parse(file.read()[:-1])
 
-	print(solve(data))
+    print(solve(data))
