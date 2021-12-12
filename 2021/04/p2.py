@@ -8,8 +8,7 @@ def winning_board(matrix):
     return v or h
 
 def solve(data):
-    head = np.array([ np.int32(x) for x in data[0].split(',') ])
-    tail = np.array([ np.int32(x) for x in ' '.join(data[1:]).replace('\n', ' ').split(' ') if x != '' ])
+    head, tail = data
 
     n = len(tail) // 25
 
@@ -30,7 +29,15 @@ def solve(data):
 
     return None
 
+def parse(content):
+    chunks = content.split('\n\n')
+
+    head = np.array([ np.int32(key) for key in chunks[0].split(',') ])
+    tail = np.array([ np.int32(num) for num in ' '.join(chunks[1:]).split() ])
+
+    return head, tail
+
 with open('input.txt') as file:
-    data = [ x for x in file.read().split('\n\n') ]
+    data = parse(file.read()[:-1])
 
     print(solve(data))
