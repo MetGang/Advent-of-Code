@@ -3,13 +3,16 @@
 from itertools import chain
 
 def solve(data):
-    mapped = list(map(lambda s: [ len(elem) for elem in s ], data))
+    mapped = map(lambda s: [ len(elem) for elem in s ], data)
 
     flatten = list(chain(*mapped))
 
-    return flatten.count(2) + flatten.count(3) + flatten.count(4) + flatten.count(7)
+    return len(flatten) - flatten.count(5) - flatten.count(6)
+
+def parse(content):
+	return [ line.split(' | ')[1].split(' ') for line in content.split('\n') ]
 
 with open('input.txt') as file:
-    data = [ line[:-1].split(' | ')[1].split(' ') for line in file.readlines() ]
+	data = parse(file.read()[:-1])
 
-    print(solve(data))
+	print(solve(data))

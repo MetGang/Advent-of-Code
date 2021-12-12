@@ -47,7 +47,10 @@ def solve(data):
 
     return total
 
-with open('input.txt') as file:
-    data = [ [ part.split(' ') for part in line[:-1].split(' | ') ] for line in file.readlines() ]
+def parse(content):
+	return [ [ part.split(' ') for part in line.split(' | ') ] for line in content.split('\n') ]
 
-    print(solve(data))
+with open('input.txt') as file:
+	data = parse(file.read()[:-1])
+
+	print(solve(data))
