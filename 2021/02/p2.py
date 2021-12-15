@@ -1,28 +1,30 @@
 # https://adventofcode.com/2021/day/2
 
 def solve(data):
+    commands = data
+
     position = 0
     depth = 0
     aim = 0
 
-    for ( cmd, v ) in data:
+    for cmd, value in commands:
         match cmd:
             case 'forward':
-                position += v
-                depth += v * aim
+                position += value
+                depth += value * aim
             case 'up':
-                aim -= v
+                aim -= value
             case 'down':
-                aim += v
+                aim += value
     
     return position * depth
 
-def parse(line):
-    splitted = line.split(' ')
+def parse(content):
+    mapper = lambda x: (x[0], int(x[1]))
 
-    return ( splitted[0], int(splitted[1]) )
+    return [ mapper(line.split(' ')) for line in content.split('\n') ]
 
 with open('input.txt') as file:
-    data = [ parse(x[:-1]) for x in file.readlines() ]
+    data = parse(file.read()[:-1])
 
     print(solve(data))
