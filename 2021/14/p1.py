@@ -1,3 +1,5 @@
+# https://adventofcode.com/2021/day/14
+
 from collections import defaultdict
 from itertools import pairwise
 
