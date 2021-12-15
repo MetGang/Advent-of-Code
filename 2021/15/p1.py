@@ -1,3 +1,5 @@
+# https://adventofcode.com/2021/day/15
+
 from dijkstar import Graph, find_path
 from itertools import pairwise
 import numpy as np
