@@ -4,7 +4,7 @@ Advent of Code is an Advent calendar of small programming puzzles for a variety 
 
 You don't need a computer science background to participate - just a little programming knowledge and some problem solving skills will get you pretty far. Nor do you need a fancy computer; every problem has a solution that completes in at most 15 seconds on ten-year-old hardware.
 
-### Community
+## Community
 
 We have quite some fun on the [SFML Discord](https://discord.gg/nr4X7Fh) server with these puzzles.
 In case anyone wants to checkout some other solutions, here are links to some other repos.
@@ -20,6 +20,6 @@ In case anyone wants to checkout some other solutions, here are links to some ot
 * [rubenwardy](https://gitlab.com/rubenwardy/advent_of_code)
 * [S4kyt](https://github.com/S4kyt/AoC-2020)
 
-### License
+## License
 
 The input files and puzzle text are under copyright of Advent of Code and are only included for completness sake.
