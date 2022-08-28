@@ -4,6 +4,6 @@ rawData ← ⊃⎕NGET'input.txt'1
 
 data ← ⍎¨rawData
 
-Solve ← +/(⌈/-⌊/)¨
+Solve ← +/(÷/{⍵[{∊(≠/¨⍵)/⍵}⍸~×1|∘.÷⍨⍵]})¨
 
 Solve data
