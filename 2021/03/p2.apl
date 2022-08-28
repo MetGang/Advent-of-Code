@@ -1,6 +1,6 @@
 ⍝ https://adventofcode.com/2021/day/3
 
-rawData ← ⊃ ⎕NGET 'input.txt' 1
+rawData ← ⊃⎕NGET'input.txt'1
 
 data ← ⍎¨↑rawData
 

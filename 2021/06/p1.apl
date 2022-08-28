@@ -2,7 +2,7 @@
 
 ⎕IO ← 0
 
-rawData ← ⊃ ⎕NGET 'input.txt' 1
+rawData ← ⊃⎕NGET'input.txt'1
 
 data ← ⍎⊃rawData
 
