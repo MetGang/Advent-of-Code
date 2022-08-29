@@ -2,8 +2,8 @@
 
 rawData ← ⊃⎕NGET'input.txt'1
 
-data ← {↓(≢⍵)(≢⊃⍵)⍴∊⍉↑⍵}2⊃¨' '⎕VFI¨rawData
+data ← {(≢⍵) 3⍴⍉⍵}↑⍎¨rawData
 
-Solve ← +/(∧/2∘⌽<1∘⌽+⊢)¨∘⊢
+Solve ← +⌿(∧/2∘⌽<1∘⌽+⊢)
 
 Solve data
