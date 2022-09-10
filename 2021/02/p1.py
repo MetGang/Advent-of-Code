@@ -23,6 +23,4 @@ def parse(content):
     return [ mapper(line.split(' ')) for line in content.split('\n') ]
 
 with open('input.txt') as file:
-    data = parse(file.read()[:-1])
-
-    print(solve(data))
+    print(solve(parse(file.read())))
