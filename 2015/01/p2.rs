@@ -10,5 +10,5 @@ fn main() {
         .position(|x| x == -1)
         .unwrap();
 
-    println!("{:?}", result);
+    println!("{}", result);
 }
