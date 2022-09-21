@@ -3,6 +3,7 @@
 # Languages
 
 * [APL](#apl)
+* [Elixir](#elixir)
 * [Python](#python)
 * [Rust](#rust)
 
@@ -30,6 +31,28 @@ data ← ⍎¨rawData
 Solve ← +/2</3+/⊢
 
 Solve data
+```
+
+### Elixir
+
+###### Part 1
+```elixir
+File.read!("input.txt")
+  |> String.split("\n")
+  |> Enum.map(&String.to_integer/1)
+  |> Enum.chunk_every(2, 1, :discard)
+  |> Enum.count(fn [a, b] -> a < b end)
+  |> IO.puts()
+```
+
+###### Part 2
+```elixir
+File.read!("input.txt")
+  |> String.split("\n")
+  |> Enum.map(&String.to_integer/1)
+  |> Enum.chunk_every(4, 1, :discard)
+  |> Enum.count(fn [a, _, _, d] -> a < d end)
+  |> IO.puts()
 ```
 
 ### Python
