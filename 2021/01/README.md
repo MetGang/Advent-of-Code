@@ -6,6 +6,7 @@
 * [Elixir](#elixir)
 * [Python](#python)
 * [Rust](#rust)
+* [Scala](#scala)
 
 # Solutions
 
@@ -114,5 +115,47 @@ fn main() {
         .count();
 
     println!("{}", result);
+}
+```
+
+### Scala
+
+###### Part 1
+```scala
+import scala.io.Source.fromFile
+
+object Hello {
+    def main(args: Array[String]) = {
+        val rawData = fromFile("input.txt").mkString
+        
+        val result = rawData
+            .split("\n")
+            .map(_.toInt)
+            .sliding(2)
+            .map(x => x.head < x.last)
+            .count(_ == true)
+        
+        print(result)
+    }
+}
+```
+
+###### Part 2
+```scala
+import scala.io.Source.fromFile
+
+object Hello {
+    def main(args: Array[String]) = {
+        val rawData = fromFile("input.txt").mkString
+        
+        val result = rawData
+            .split("\n")
+            .map(_.toInt)
+            .sliding(4)
+            .map(x => x.head < x.last)
+            .count(_ == true)
+        
+        print(result)
+    }
 }
 ```
