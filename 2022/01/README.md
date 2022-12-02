@@ -2,9 +2,42 @@
 
 # Languages
 
+* [Elixir](#elixir)
 * [Python](#python)
 
 # Solutions
+
+### Elixir
+
+###### Part 1
+```elixir
+File.read!("input.txt")
+  |> String.split("\n\n")
+  |> Enum.map(fn line ->
+    line
+    |> String.split("\n")
+    |> Enum.map(&String.to_integer/1)
+    |> Enum.sum()
+  end)
+  |> Enum.max()
+  |> IO.puts()
+```
+
+###### Part 2
+```elixir
+File.read!("input.txt")
+  |> String.split("\n\n")
+  |> Enum.map(fn line ->
+    line
+    |> String.split("\n")
+    |> Enum.map(&String.to_integer/1)
+    |> Enum.sum()
+  end)
+  |> Enum.sort(:desc)
+  |> Enum.take(3)
+  |> Enum.sum()
+  |> IO.puts()
+```
 
 ### Python
 
