@@ -27,7 +27,7 @@ def solve(data):
     return sum(map(get_outcome, data))
 
 def parse(content):
-    return [ line.split(' ') for line in content.split('\n') ]
+    return ( line.split(' ') for line in content.split('\n') )
 
 with open('input.txt') as file:
     print(solve(parse(file.read())))
@@ -52,7 +52,7 @@ def solve(data):
     return sum(map(get_outcome, data))
 
 def parse(content):
-    return [ line.split(' ') for line in content.split('\n') ]
+    return ( line.split(' ') for line in content.split('\n') )
 
 with open('input.txt') as file:
     print(solve(parse(file.read())))
