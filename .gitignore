@@ -1,6 +1,8 @@
 .vscode
+.vs
+
+sandbox
 
 *.exe
 *.pdb
-
-sandbox
+*.txt
