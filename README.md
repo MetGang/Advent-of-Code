@@ -19,7 +19,3 @@ In case anyone wants to checkout some other solutions, here are links to some ot
 * [Rosme](https://github.com/Rosme/aoc)
 * [rubenwardy](https://gitlab.com/rubenwardy/advent_of_code)
 * [S4kyt](https://github.com/S4kyt/AoC-2020)
-
-## License
-
-The input files and puzzle text are under copyright of Advent of Code and are only included for completness sake.
