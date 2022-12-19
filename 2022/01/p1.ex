@@ -1,0 +1,10 @@
+File.read!("input.txt")
+  |> String.split("\n\n")
+  |> Stream.map(fn line ->
+    line
+    |> String.split("\n")
+    |> Stream.map(&String.to_integer/1)
+    |> Enum.sum()
+  end)
+  |> Enum.max()
+  |> IO.puts()
