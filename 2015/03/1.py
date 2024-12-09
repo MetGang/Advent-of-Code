@@ -11,6 +11,6 @@ mapping = {
 
 adder = lambda a, b: (a[0] + b[0], a[1] + b[1])
 
-solve = read_file('input.txt') | map(mapping) | scan(adder, (0, 0)) | set | tally()
+solve = gen.read_file('input.txt') | al.map(mapping) | al.scan(adder, (0, 0)) | al.distinct() | al.tally()
 
 print(solve())

@@ -10,9 +10,10 @@ mapping = {
 }
 
 adder = lambda a, b: (a[0] + b[0], a[1] + b[1])
+lhs = al.take_every(2) | al.scan(adder, (0, 0)) | list
+rhs = al.drop_every(2) | al.scan(adder, (0, 0)) | list
+foo = fun.to(list) | cb.train(lhs, op.add, rhs)
 
-foo = train(take_every(2, 0) | scan(adder, (0, 0)) | list, op.add, take_every(2, 1) | scan(adder, (0, 0)) | list)
-
-solve = read_file('input.txt') | map(mapping) | list | foo | set | tally()
+solve = gen.read_file('input.txt') | al.map(mapping) | foo | al.distinct() | al.tally()
 
 print(solve())
