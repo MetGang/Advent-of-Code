@@ -2,6 +2,6 @@
 
 from advent import *
 
-solve = read_file('input.txt') | txt.split_by('\n\n') | map(txt.split_by('\n') | map(int) | sum()) | max()
+solve = gen.read_file('input.txt') | txt.split_by('\n\n') | al.map(txt.split_by('\n') | al.map(int) | al.sum()) | al.max()
 
 print(solve())
