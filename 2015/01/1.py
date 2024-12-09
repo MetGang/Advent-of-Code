@@ -2,6 +2,6 @@
 
 from advent import *
 
-solve = read_file('input.txt') | map({ '(': 1, ')': -1 }) | sum()
+solve = gen.read_file('input.txt') | al.map({ '(': 1, ')': -1 }) | al.sum()
 
 print(solve())

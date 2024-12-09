@@ -2,6 +2,6 @@
 
 from advent import *
 
-solve = read_file('input.txt') | map({ '(': 1, ')': -1 }) | scan(op.add) | index(-1) | (op.add >> 1)
+solve = gen.read_file('input.txt') | al.map({ '(': 1, ')': -1 }) | al.scan(op.add) | al.index(-1) | (op.add >> 1)
 
 print(solve())
