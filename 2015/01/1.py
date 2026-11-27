@@ -2,6 +2,10 @@
 
 from advent import *
 
-solve = gen.read_file('input.txt') | al.map({ '(': 1, ')': -1 }) | al.sum()
+solver = (
+    gn.read_file('input.txt')
+    | sq.map({ '(': 1, ')': -1 })
+    | sq.sum()
+)
 
-print(solve())
+print(solver())
