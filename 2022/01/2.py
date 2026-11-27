@@ -2,6 +2,17 @@
 
 from advent import *
 
-solve = gen.read_file('input.txt') | txt.split_by('\n\n') | al.map(txt.split_by('\n') | al.map(int) | al.sum()) | al.sort(op.gt) | al.take(3) | al.sum()
+solver = (
+    gn.read_file('input.txt')
+    | tt.split_by('\n\n')
+    | sq.map(
+        tt.split_by('\n')
+        | sq.map(int)
+        | sq.sum()
+    )
+    | sq.sort_with(op.gt)
+    | sq.take(3)
+    | sq.sum()
+)
 
-print(solve())
+print(solver())
