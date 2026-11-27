@@ -1,7 +1,4 @@
-.vscode
-.vs
-
-sandbox
+.venv
 
 *.exe
 *.pdb
