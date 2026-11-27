@@ -11,6 +11,12 @@ mapping = {
 
 adder = lambda a, b: (a[0] + b[0], a[1] + b[1])
 
-solve = gen.read_file('input.txt') | al.map(mapping) | al.scan(adder, (0, 0)) | al.distinct() | al.tally()
+solver = (
+    gn.read_file('input.txt')
+    | sq.map(mapping)
+    | sq.scan(adder, (0, 0))
+    | sq.distinct()
+    | sq.tally()
+)
 
-print(solve())
+print(solver())

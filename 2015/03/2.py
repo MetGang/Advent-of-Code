@@ -10,10 +10,16 @@ mapping = {
 }
 
 adder = lambda a, b: (a[0] + b[0], a[1] + b[1])
-lhs = al.take_every(2) | al.scan(adder, (0, 0)) | list
-rhs = al.drop_every(2) | al.scan(adder, (0, 0)) | list
-foo = fun.to(list) | cb.train(lhs, op.add, rhs)
+santa = sq.drop_every(2) | sq.scan(adder, (0, 0)) | fn.to(list)
+robot = sq.take_every(2) | sq.scan(adder, (0, 0)) | fn.to(list)
+combine = fn.to(list) | cb.train(santa, op.add, robot)
 
-solve = gen.read_file('input.txt') | al.map(mapping) | foo | al.distinct() | al.tally()
+solver = (
+    gn.read_file('input.txt')
+    | sq.map(mapping)
+    | combine
+    | sq.distinct()
+    | sq.tally()
+)
 
-print(solve())
+print(solver())
